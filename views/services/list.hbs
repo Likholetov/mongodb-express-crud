@@ -1,0 +1,23 @@
+<h3>Список услуг <a href="/services" class="btn btn-success"><i class="fa fa-plus"> Добавить услугу</i></a></h3>
+
+<table class="table table-striped">
+    <thead>
+        <th>Название</th>
+        <th>Цена</th>
+        <th>Тип</th>
+        <th></th>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.price}}</td>
+            <td>{{this.type}}</td>
+            <td>
+                <a href="/services/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/services/delete/{{this._id}}"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
