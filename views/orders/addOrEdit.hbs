@@ -1,0 +1,21 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/orders" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{ order._id }}">
+    <div class="form-group">
+        <label>telegramId</label>
+        <input type="number" class="form-control" name="telegramId" required placeholder="telegramId" value="{{order.telegramId}}">
+    </div>
+    <div class="form-group">
+        <label>Деталь</label>
+        <input type="text" class="form-control" name="part" required placeholder="Деталь" value="{{order.part}}">
+    </div>
+    <div class="form-group">
+        <label>Статус</label>
+        <input type="text" class="form-control" name="status" required placeholder="Статус" value="{{order.status}}">
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Отправить</button>
+        <a href="/orders/list" class="btn btn-secondary"><i class="fa fa-times"> Назад</i></a>
+    </div>
+</form>

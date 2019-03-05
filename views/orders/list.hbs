@@ -1,0 +1,23 @@
+<h3>Список услуг <a href="/orders" class="btn btn-success mr-2"><i class="fa fa-plus"> Добавить заказ</i></a><a href="/services/list/" class="btn btn-info mr-2">Услуги</a><a href="/parts/list/" class="btn btn-info">Детали</a></h3>
+
+<table class="table table-striped">
+    <thead>
+        <th>telegramId</th>
+        <th>Деталь</th>
+        <th>Статус</th>
+        <th></th>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.telegramId}}</td>
+            <td>{{this.part}}</td>
+            <td>{{this.status}}</td>
+            <td>
+                <a href="/orders/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/orders/delete/{{this._id}}"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

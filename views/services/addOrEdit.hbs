@@ -4,15 +4,15 @@
     <input type="hidden" name="_id" value="{{ service._id }}">
     <div class="form-group">
         <label>Название</label>
-        <input type="text" class="form-control" name="name" placeholder="Название услуги" value="{{service.name}}">
+        <input type="text" class="form-control" name="name" required placeholder="Название услуги" value="{{service.name}}">
     </div>
     <div class="form-group">
         <label>Цена</label>
-        <input type="text" class="form-control" name="price" placeholder="Цена услуги" value="{{service.price}}">
+        <input type="number" class="form-control" name="price" required placeholder="Цена услуги" value="{{service.price}}">
     </div>
     <div class="form-group">
         <label>Тип</label>
-        <input type="text" class="form-control" name="type" placeholder="Тип услуги" value="{{service.type}}">
+        <input type="text" class="form-control" name="type" required placeholder="Тип услуги" value="{{service.type}}">
     </div>
     <div class="form-group">
         <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Отправить</button>

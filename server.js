@@ -5,6 +5,8 @@ import bodyparser from 'body-parser'
 
 import './models/db'
 import serviceController from './controllers/serviceController'
+import partController from './controllers/partController'
+import orderController from './controllers/orderController'
 
 const app = express()
 
@@ -16,8 +18,10 @@ app.set('views', path.join(__dirname, '/views/'))
 app.engine('hbs', exphbs({ extname: 'hbs', defaultLayout: 'mainLayout', layoutsDir: __dirname + '/views/layouts/' }))
 app.set('view engine', 'hbs')
 
-app.listen(3000, () => {
-    console.log('Express server started at port : 3000')
+app.listen(8000, () => {
+    console.log('Express server started at port : 8000')
 })
 
 app.use('/services', serviceController)
+app.use('/parts', partController)
+app.use('/orders', orderController)

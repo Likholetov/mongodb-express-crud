@@ -1,5 +1,7 @@
 import mongoose from 'mongoose'
 import '../models/service.model'
+import '../models/part.model'
+import '../models/order.model'
 
 // подключение MongoDB
 mongoose.connect('mongodb://localhost/botcarservice', {

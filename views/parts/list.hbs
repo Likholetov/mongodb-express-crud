@@ -1,0 +1,33 @@
+<h3>Список деталей <a href="/parts" class="btn btn-success mr-2"><i class="fa fa-plus"> Добавить деталь</i></a><a href="/services/list/" class="btn btn-info mr-2">Услуги</a><a href="/orders/list/" class="btn btn-info">Заказы</a></h3>
+
+<table class="table table-striped">
+    <thead>
+        <th>Название</th>
+        <th>Цена</th>
+        <th>Тип</th>
+        <th>Марка</th>
+        <th>Модели</th>
+        <th>Цена установки</th>
+        <th>Изображение</th>
+        <th>Описание</th>
+        <th></th>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.price}}</td>
+            <td>{{this.type}}</td>
+            <td>{{this.brand}}</td>
+            <td>{{this.cars}}</td>
+            <td>{{this.installation}}</td>
+            <td>{{this.image}}</td>
+            <td>{{this.about}}</td>
+            <td>
+                <a href="/parts/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/parts/delete/{{this._id}}"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

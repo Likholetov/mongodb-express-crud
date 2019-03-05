@@ -1,0 +1,41 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/parts" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{ part._id }}">
+    <div class="form-group">
+        <label>Название</label>
+        <input type="text" class="form-control" name="name" required placeholder="Название детали" value="{{part.name}}">
+    </div>
+    <div class="form-group">
+        <label>Цена</label>
+        <input type="number" class="form-control" name="price" required placeholder="Цена детали" value="{{part.price}}">
+    </div>
+    <div class="form-group">
+        <label>Тип</label>
+        <input type="text" class="form-control" name="type" required placeholder="Тип детали" value="{{part.type}}">
+    </div>
+    <div class="form-group">
+        <label>Марка</label>
+        <input type="text" class="form-control" name="brand" required placeholder="Марка детали" value="{{part.brand}}">
+    </div>
+    <div class="form-group">
+        <label>Модели</label>
+        <input type="text" class="form-control" name="cars" required placeholder="Модели" value="{{part.cars}}">
+    </div>
+    <div class="form-group">
+        <label>Установка</label>
+        <input type="number" class="form-control" name="installation" required placeholder="Стоимость установки" value="{{part.installation}}">
+    </div>
+    <div class="form-group">
+        <label>Изображение</label>
+        <input type="text" class="form-control" name="image" required placeholder="Ссылка на изображение" value="{{part.image}}">
+    </div>
+    <div class="form-group">
+        <label>Описание</label>
+        <input type="text" class="form-control" name="about" required placeholder="Описание" value="{{part.about}}">
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Отправить</button>
+        <a href="/parts/list" class="btn btn-secondary"><i class="fa fa-times"> Назад</i></a>
+    </div>
+</form>
